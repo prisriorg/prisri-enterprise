@@ -4,9 +4,13 @@ const nextConfig: NextConfig = {
   /* config options here */
   // output:'export',
   trailingSlash: true, 
+  reactStrictMode: true,
+  swcMinify: true,
+  images: {
+    unoptimized: true,
+  },
 };
-
-export default nextConfig;
+module.exports = nextConfig;
 
 // added by create cloudflare to enable calling `getCloudflareContext()` in `next dev`
 import { initOpenNextCloudflareForDev } from '@opennextjs/cloudflare';
